@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hygeia Biosciences — Corporate Overview 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d1117;
+  --ink-soft: #1e2530;
+  --paper: #f8f5f0;
+  --paper-mid: #ede9e2;
+  --gold: #c4923a;
+  --gold-light: #ddb96a;
+  --gold-pale: #f5ead4;
+  --teal: #1a5c5a;
+  --teal-light: #2a8c89;
+  --teal-pale: #e0f0ef;
+  --muted: #6b6560;
+  --rule: rgba(196,146,58,0.2);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background: rgba(13,17,23,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(248,245,240,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 80px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,146,58,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,92,90,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+  margin-bottom: 16px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 300;
+  color: rgba(248,245,240,0.6);
+  max-width: 640px;
+  margin-bottom: 56px;
+  line-height: 1.5;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {}
+
+.hero-stat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.hero-stat-l {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.hero-cta:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.hero-cta::after { content: '↓'; }
+
+/* ── SECTION SHELL ── */
+section {
+  padding: 100px 80px;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background: var(--ink-soft);
+}
+
+.section-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+
+h2 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.section-lead {
+  font-size: 17px;
+  color: rgba(248,245,240,0.65);
+  max-width: 680px;
+  line-height: 1.75;
+  margin-bottom: 60px;
+}
+
+/* ── MISSION ── */
+.mission-pull {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3.5vw, 44px);
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--paper);
+  max-width: 860px;
+  border-left: 3px solid var(--gold);
+  padding-left: 36px;
+}
+
+.mission-pull strong {
+  color: var(--gold-light);
+  font-weight: 400;
+}
+
+/* ── PROBLEM ── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2px;
+}
+
+.problem-card {
+  background: rgba(248,245,240,0.03);
+  border: 1px solid rgba(196,146,58,0.15);
+  padding: 32px 28px;
+  position: relative;
+}
+
+.problem-card::before {
+  content: attr(data-n);
+  position: absolute;
+  top: 20px; right: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: rgba(196,146,58,0.08);
+  line-height: 1;
+}
+
+.problem-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  max-width: 200px;
+}
+
+.problem-card p {
+  font-size: 14px;
+  color: rgba(248,245,240,0.6);
+  line-height: 1.75;
+}
+
+/* ── WHO WE ARE ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.product-card {
+  background: rgba(248,245,240,0.04);
+  border: 1px solid rgba(196,146,58,0.2);
+  padding: 28px 24px;
+}
+
+.product-card.featured {
+  border-color: var(--gold);
+  background: rgba(196,146,58,0.07);
+}
+
+.product-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.product-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold-light);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 4px;
+}
+
+.product-card .product-type {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.product-card ul {
+  list-style: none;
+  font-size: 13px;
+  color: rgba(248,245,240,0.55);
+}
+
+.product-card ul li::before {
+  content: '→ ';
+  color: var(--gold);
+}
+
+.product-card ul li { margin-bottom: 4px; }
+
+.platform-note {
+  background: rgba(26,92,90,0.12);
+  border: 1px solid rgba(42,140,137,0.3);
+  border-left: 3px solid var(--teal-light);
+  padding: 20px 24px;
+  font-size: 14px;
+  color: rgba(248,245,240,0.7);
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+.platform-note strong { color: var(--teal-light); font-weight: 500; }
+
+/* ── STRATEGY ── */
+.prong-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prong {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  background: rgba(248,245,240,0.03);
+  border: 1px solid rgba(196,146,58,0.12);
+  padding: 28px 32px;
+  transition: border-color 0.2s;
+}
+
+.prong:hover { border-color: rgba(196,146,58,0.35); }
+
+.prong-n {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.prong h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1.2;
+}
+
+.prong p {
+  font-size: 14px;
+  color: rgba(248,245,240,0.6);
+  line-height: 1.7;
+}
+
+.prong-revenue {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  background: rgba(26,92,90,0.15);
+  border: 1px solid rgba(42,140,137,0.3);
+  padding: 6px 12px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ── MOAT ── */
+.moat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.moat-card {
+  background: rgba(248,245,240,0.03);
+  border: 1px solid rgba(196,146,58,0.15);
+  padding: 36px 28px;
+}
+
+.moat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: rgba(196,146,58,0.15);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.moat-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.moat-card p {
+  font-size: 14px;
+  color: rgba(248,245,240,0.6);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.moat-traction {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moat-traction::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── FLYWHEEL ── */
+.flywheel-compare {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+
+.flywheel-col {
+  border: 1px solid rgba(196,146,58,0.15);
+  padding: 36px 32px;
+}
+
+.flywheel-col.hygeia {
+  border-color: var(--gold);
+  background: rgba(196,146,58,0.05);
+}
+
+.flywheel-col h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.flywheel-col.typical h3 { color: var(--muted); }
+.flywheel-col.hygeia h3 { color: var(--gold); }
+
+.flywheel-col ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.flywheel-col.typical ul li { color: rgba(248,245,240,0.45); }
+.flywheel-col.hygeia ul li { color: rgba(248,245,240,0.8); }
+
+.flywheel-col.hygeia ul li::before { content: '✓ '; color: var(--gold); }
+.flywheel-col.typical ul li::before { content: '✗ '; color: rgba(107,101,96,0.6); }
+
+.vs-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248,245,240,0.03);
+  border-top: 1px solid rgba(196,146,58,0.15);
+  border-bottom: 1px solid rgba(196,146,58,0.15);
+}
+
+.vs-sep span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.flywheel-label {
+  margin-top: 16px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  padding: 8px 0;
+  border-top: 1px solid rgba(196,146,58,0.2);
+}
+
+.flywheel-col.typical .flywheel-label { color: rgba(107,101,96,0.7); }
+.flywheel-col.hygeia .flywheel-label { color: var(--gold); }
+
+/* ── TRACTION ── */
+.traction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.traction-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(248,245,240,0.03);
+  border: 1px solid rgba(196,146,58,0.12);
+  padding: 24px;
+}
+
+.traction-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.badge-built { background: rgba(42,140,137,0.15); color: var(--teal-light); border: 1px solid rgba(42,140,137,0.3); }
+.badge-complete { background: rgba(196,146,58,0.15); color: var(--gold); border: 1px solid rgba(196,146,58,0.3); }
+.badge-active { background: rgba(26,92,90,0.15); color: var(--teal-light); border: 1px solid rgba(26,92,90,0.3); }
+.badge-initiated { background: rgba(248,245,240,0.06); color: rgba(248,245,240,0.5); border: 1px solid rgba(248,245,240,0.12); }
+.badge-progress { background: rgba(196,146,58,0.1); color: var(--gold-light); border: 1px solid rgba(196,146,58,0.2); }
+.badge-ready { background: rgba(42,140,137,0.1); color: var(--teal-light); border: 1px solid rgba(42,140,137,0.2); }
+
+.traction-item h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--paper);
+  margin-bottom: 6px;
+}
+
+.traction-item p {
+  font-size: 13px;
+  color: rgba(248,245,240,0.55);
+  line-height: 1.7;
+}
+
+/* ── ROADMAP ── */
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  counter-reset: roadmap;
+}
+
+.roadmap-col {
+  border: 1px solid rgba(196,146,58,0.15);
+  padding: 36px 28px;
+  counter-increment: roadmap;
+  position: relative;
+}
+
+.roadmap-col::before {
+  content: '0' counter(roadmap);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: rgba(196,146,58,0.1);
+  position: absolute;
+  top: 24px; right: 24px;
+  line-height: 1;
+}
+
+.roadmap-col h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.roadmap-col ul {
+  list-style: none;
+  font-size: 13px;
+  color: rgba(248,245,240,0.6);
+}
+
+.roadmap-col ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(248,245,240,0.05);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.roadmap-col ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px;
+  width: 6px; height: 1px;
+  background: var(--gold);
+}
+
+.roadmap-col ul li:last-child { border-bottom: none; }
+
+/* ── TEAM ── */
+.team-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.team-col h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.team-member {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(248,245,240,0.06);
+}
+
+.team-member:last-child { border-bottom: none; }
+
+.team-member h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--paper);
+  margin-bottom: 2px;
+}
+
+.team-member .role {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.team-member p {
+  font-size: 13px;
+  color: rgba(248,245,240,0.5);
+  line-height: 1.6;
+}
+
+/* ── CTA ── */
+.cta-section {
+  background: var(--ink-soft);
+  text-align: center;
+  padding: 120px 80px;
+}
+
+.cta-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: rgba(248,245,240,0.55);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.btn-primary:hover { background: var(--gold-light); }
+
+.btn-secondary {
+  background: none;
+  color: var(--paper);
+  border: 1px solid rgba(248,245,240,0.25);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding: 32px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+}
+
+.footer-meta {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 32px 60px; }
+  section { padding: 72px 32px; }
+  .prong { grid-template-columns: 1fr; gap: 12px; }
+  .flywheel-compare { grid-template-columns: 1fr; }
+  .vs-sep { display: none; }
+  .roadmap { grid-template-columns: 1fr; }
+  .moat-grid { grid-template-columns: 1fr; }
+  .team-section { grid-template-columns: 1fr; gap: 32px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
+  .cta-section { padding: 80px 32px; }
+  .hero-stats { gap: 28px; }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Hygeia Biosciences</div>
+  <ul class="nav-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#platform">Platform</a></li>
+    <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#moat">Moat</a></li>
+    <li><a href="#traction">Traction</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-eyebrow">Corporate Overview · 2026 · Confidential</div>
+  <h1>Building the <em>commercial<br>infrastructure</em><br>precision fermentation<br>has been missing.</h1>
+  <p class="hero-sub">A precision fermentation platform advancing scalable bio-solutions for health, sustainability, and long-term growth across ASEAN and beyond.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-n">5</div>
+      <div class="hero-stat-l">Revenue streams</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">4</div>
+      <div class="hero-stat-l">Ingredient verticals</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">ASEAN</div>
+      <div class="hero-stat-l">Primary market</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">Pre-rev</div>
+      <div class="hero-stat-l">Current stage</div>
+    </div>
+  </div>
+  <a href="#mission" class="hero-cta">Explore the Platform</a>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="section-eyebrow">The Mission</div>
+  <div class="mission-pull reveal">
+    Precision fermentation has the potential to redefine how the world produces food, ingredients, and wellness compounds.<br><br>
+    <strong>The industry's biggest barrier isn't the science.</strong><br><br>
+    It's commercial infrastructure that doesn't exist yet.<br><br>
+    Hygeia and Avante exist to build it. Starting with ASEAN. Scaling globally.
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="section-eyebrow">The Problem</div>
+  <h2>The Science Works.<br><em>The Infrastructure Doesn't.</em></h2>
+  <p class="section-lead">Precision fermentation companies across ASEAN are solving the biology. What stops them from reaching market is everything that comes after the lab — and none of it is built for this category yet.</p>
+  <div class="problem-grid">
+    <div class="problem-card reveal" data-n="01">
+      <h3>Regulatory Pathways Are Fragmented and Company-Specific</h3>
+      <p>Every fermentation company navigates Novel Food approvals from scratch. No consolidated intelligence, no shared frameworks, no regional playbook. Each approval costs years and capital that most startups don't have.</p>
+    </div>
+    <div class="problem-card reveal" data-n="02">
+      <h3>Formulation Expertise for This Category Doesn't Exist at Scale</h3>
+      <p>Generic formulation platforms have no precision fermentation depth and no ASEAN regulatory context. The output is a document. What brands need is a commercialisation decision — those are not the same thing.</p>
+    </div>
+    <div class="problem-card reveal" data-n="03">
+      <h3>No Market Intelligence Layer Exists for the Category</h3>
+      <p>No one tracks which fermentation ingredients are gaining traction, which applications are growing, or which buyers are actually paying — across ASEAN, in consolidated form, for this category specifically.</p>
+    </div>
+    <div class="problem-card reveal" data-n="04">
+      <h3>Hardware Infrastructure Is Priced for Pharma, Not Food</h3>
+      <p>Enterprise bioprocess systems are built for biopharma margins. Emerging fermentation ingredient companies cannot absorb the CAPEX. Scale-up becomes the bottleneck even when the science is fully proven.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section id="platform">
+  <div class="section-eyebrow">Who We Are</div>
+  <h2>Built to Commercialise <em>One Product,</em><br>Designed to Scale Many More.</h2>
+  <p class="section-lead">Hygeia Biosciences is a commercialisation-focused biotechnology platform bridging the gap between laboratory innovation and scalable market deployment across ASEAN.</p>
+  <div class="product-grid">
+    <div class="product-card featured reveal">
+      <div class="product-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+      </div>
+      <h3>Hygeia Nutraceuticals</h3>
+      <div class="product-type">Functional Ingredients · Current Focus</div>
+      <ul>
+        <li>Sialic acid <em style="font-size:11px;color:var(--gold)">(primary)</em></li>
+        <li>Astaxanthin</li>
+      </ul>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">
+        <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+      </div>
+      <h3>Hygeia Sweetener</h3>
+      <div class="product-type">Sugar Replacement</div>
+      <ul>
+        <li>Brazzein</li>
+        <li>Tagatose</li>
+      </ul>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <h3>Hygeia Dairy</h3>
+      <div class="product-type">Dairy Enhancement</div>
+      <ul>
+        <li>Lactoferrin</li>
+        <li>HMOs</li>
+      </ul>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <h3>Avante</h3>
+      <div class="product-type">Production Infrastructure</div>
+      <ul>
+        <li>Bioreactors</li>
+        <li>Pilot &amp; Manufacturing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="platform-note reveal">
+    <strong>Current singular focus: Sialic Acid — Hygeia Nutraceuticals.</strong> The platform architecture is what makes every future ingredient possible — and every future revenue stream inevitable.
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy">
+  <div class="section-eyebrow">Strategy</div>
+  <h2>Five Prongs.<br><em>One Compounding</em> Advantage.</h2>
+  <p class="section-lead">Unlike a typical fermentation startup dependent on a single production milestone, Hygeia runs five revenue pathways simultaneously — each active at a different stage, each feeding the others.</p>
+  <div class="prong-grid">
+    <div class="prong reveal">
+      <div>
+        <div class="prong-n">Prong 1</div>
+        <h3>Precision Fermentation<br>Ingredients</h3>
+      </div>
+      <p>Own production pipeline. Sialic acid first, with brazzein and lactoferrin following. Revenue when production-ready — with the platform infrastructure already in place to scale rapidly.</p>
+      <div class="prong-revenue">Ingredient Revenue</div>
+    </div>
+    <div class="prong reveal">
+      <div>
+        <div class="prong-n">Prong 2</div>
+        <h3>Bioprocess Hardware<br>(Avante)</h3>
+      </div>
+      <p>Bioreactor sales, leasing, and bioreactor-as-a-service. Every fermentation operator on the platform is a potential Avante customer — turning the infrastructure into its own standalone revenue stream.</p>
+      <div class="prong-revenue">Hardware Revenue</div>
+    </div>
+    <div class="prong reveal">
+      <div>
+        <div class="prong-n">Prong 3</div>
+        <h3>Ingredient-Agnostic<br>Commercialisation Services</h3>
+      </div>
+      <p>Wellness brands pay for scoping, concept development, and full commercialisation programs. Revenue starts now — no Hygeia production required. Methodology validated internally first.</p>
+      <div class="prong-revenue">Service Fees</div>
+    </div>
+    <div class="prong reveal">
+      <div>
+        <div class="prong-n">Prong 4</div>
+        <h3>Ecosystem<br>Platform</h3>
+      </div>
+      <p>A marketplace connecting fermentation startups, brands, distributors, and equipment vendors. Referral fees, listing fees, distribution gateway commissions. Network that compounds with every participant.</p>
+      <div class="prong-revenue">Platform Fees</div>
+    </div>
+    <div class="prong reveal">
+      <div>
+        <div class="prong-n">Prong 5</div>
+        <h3>Proprietary<br>Intelligence Layer</h3>
+      </div>
+      <p>ASEAN market patterns, regulatory pathway data, ingredient traction signals. Compounds through every engagement. The platform owner sees what no single participant can — and it is never shared externally.</p>
+      <div class="prong-revenue">Strategic Moat</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITIVE MOAT -->
+<section id="moat">
+  <div class="section-eyebrow">Competitive Moat</div>
+  <h2>Three Structural Moats.<br><em>None of Them Transferable.</em></h2>
+  <p class="section-lead">Each moat is architectural, not tactical. They cannot be replicated by observing platform data, copying the model, or outspending on marketing.</p>
+  <div class="moat-grid">
+    <div class="moat-card reveal">
+      <div class="moat-n">01</div>
+      <h3>Novel Food Regulatory Approvals</h3>
+      <p>Novel Food approvals are company-specific, individual, and non-transferable by law. Every approval Hygeia earns is a permanent competitive moat — no platform participant can replicate it by observing what we do.</p>
+      <div class="moat-traction">SFA dossier architecture initiated for sialic acid</div>
+    </div>
+    <div class="moat-card reveal">
+      <div class="moat-n">02</div>
+      <h3>Platform Meta-Intelligence</h3>
+      <p>Like Visa — which sees every flow across the network while individual banks see only their own transactions — Hygeia as platform owner sees the whole network. Individual participants see only their own slice. This gap widens with every engagement.</p>
+      <div class="moat-traction">Intelligence compounds from day one</div>
+    </div>
+    <div class="moat-card reveal">
+      <div class="moat-n">03</div>
+      <h3>Avante CAPEX Control</h3>
+      <p>Hygeia controls its own hardware costs through Avante in a way no other ingredient company can replicate. JV steelmaker partnerships, Siemens integration, and modular architecture create a fabrication moat that takes years to build.</p>
+      <div class="moat-traction">Steel JV pipeline active · Siemens discussions underway</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLYWHEEL -->
+<section>
+  <div class="section-eyebrow">The Flywheel</div>
+  <h2>Each Prong <em>De-Risks</em> the Others.</h2>
+  <p class="section-lead">A typical precision fermentation company has one revenue stream, dependent on one production milestone, vulnerable to one point of failure. Hygeia is built differently.</p>
+  <div class="flywheel-compare reveal">
+    <div class="flywheel-col typical">
+      <h3>Typical Precision Fermentation Co.</h3>
+      <ul>
+        <li>Single revenue stream (ingredient supply only)</li>
+        <li>Revenue dependent on production milestone</li>
+        <li>No revenue for 3–5 years minimum</li>
+        <li>Vulnerable to single point of failure</li>
+        <li>No network or platform effects</li>
+      </ul>
+      <div class="flywheel-label">Higher Risk · Longer Time to Revenue</div>
+    </div>
+    <div class="vs-sep"><span>vs</span></div>
+    <div class="flywheel-col hygeia">
+      <h3>Hygeia + Avante</h3>
+      <ul>
+        <li>Five revenue streams active at different stages</li>
+        <li>Revenue could potentially start before production milestone</li>
+        <li>Intelligence and relationships compound over time</li>
+        <li>Platform creates network effects no ingredient company can replicate</li>
+        <li>Each prong de-risks the others</li>
+      </ul>
+      <div class="flywheel-label">Lower Risk · Earlier Revenue · Compounding Advantage</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACTION -->
+<section id="traction">
+  <div class="section-eyebrow">Execution Traction</div>
+  <h2>Traction Reflects <em>Systems Built.</em></h2>
+  <p class="section-lead">Hygeia is at prototype and early infrastructure stage — consistent with a pre-commercial precision fermentation platform. Every item below is a system that compounds.</p>
+  <div class="traction-grid">
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-built">Built</div>
+      <div>
+        <h4>Formulation Intelligence Engine</h4>
+        <p>Prototype built. Processing ingredient parameters for sialic acid, brazzein, and lactoferrin production scenarios.</p>
+      </div>
+    </div>
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-complete">Complete</div>
+      <div>
+        <h4>Techno-Economic Model</h4>
+        <p>Completed across 3 production scenarios. 2,000+ Monte Carlo simulations modelled. Conservative, base, and advanced yield scenarios validated.</p>
+      </div>
+    </div>
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-initiated">Initiated</div>
+      <div>
+        <h4>SFA Regulatory Workflow Architecture</h4>
+        <p>Novel Food dossier architecture for sialic acid. Creates the template for all future ingredient regulatory submissions.</p>
+      </div>
+    </div>
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-active">Active</div>
+      <div>
+        <h4>Siemens Process Intelligence Discussions</h4>
+        <p>Active discussions underway for industrial automation integration into Avante's modular hardware platform.</p>
+      </div>
+    </div>
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-progress">In Progress</div>
+      <div>
+        <h4>Steel JV Pipeline — Avante</h4>
+        <p>Active engagement with ASEAN-based steelmaker partners. Two target JV partners identified. 12-month milestone.</p>
+      </div>
+    </div>
+    <div class="traction-item reveal">
+      <div class="traction-badge badge-ready">Ready</div>
+      <div>
+        <h4>Three-Ingredient Anchor Pipeline</h4>
+        <p>Sialic acid, brazzein, and lactoferrin — all with defined bioprocessing requirements ready for Avante platform deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section>
+  <div class="section-eyebrow">Growth Roadmap</div>
+  <h2>From Infrastructure to <em>Platform Dominance.</em></h2>
+  <div class="roadmap">
+    <div class="roadmap-col reveal">
+      <h3>Process &amp; Regulatory Infrastructure</h3>
+      <ul>
+        <li>Complete fermentation process optimisation</li>
+        <li>Finalise techno-economic model across all three anchor ingredients</li>
+        <li>Prepare SFA Novel Food dossier for submission</li>
+        <li>Sign Avante JV agreements with 2 steelmaker partners</li>
+        <li>Formalise Siemens integration scope</li>
+      </ul>
+    </div>
+    <div class="roadmap-col reveal">
+      <h3>ASEAN Market Entry &amp; First Revenue</h3>
+      <ul>
+        <li>SFA regulatory submission for sialic acid</li>
+        <li>First B2B ingredient partnerships across Singapore and key ASEAN markets</li>
+        <li>Commercial pilot engagements — Prong 3 service revenue active</li>
+        <li>Avante first hardware sales and leases to external fermentation companies</li>
+        <li>Ecosystem platform soft launch with anchor tenants</li>
+      </ul>
+    </div>
+    <div class="roadmap-col reveal">
+      <h3>Platform Expansion &amp; Intelligence Scale</h3>
+      <ul>
+        <li>Scale sialic acid production to 10,000L commercial vessel</li>
+        <li>Expand ingredient portfolio to brazzein and lactoferrin</li>
+        <li>Deepen commercialisation intelligence across China and ASEAN wellness markets</li>
+        <li>Bioreactor-as-a-service model live with 5+ external fermentation companies</li>
+        <li>Proprietary ASEAN Precision Fermentation Intelligence Index launched</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="section-eyebrow">Leadership</div>
+  <h2>Commercial Depth with <em>Scientific Rigour.</em></h2>
+  <div class="team-section">
+    <div class="team-col">
+      <h3>Commercial Team</h3>
+      <div class="team-member reveal">
+        <h4>Mr Rodger Ng</h4>
+        <div class="role">Co-Founder</div>
+        <p>30+ years in contract manufacturing and supply chain management.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>Ms Magdalene Lee</h4>
+        <div class="role">Operations</div>
+        <p>30+ years in contract manufacturing and supply chain management.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>Ms Nichol Ng</h4>
+        <div class="role">Commercial Partnerships</div>
+        <p>20+ years in food distribution and services. Co-founder of Food Bank Singapore.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>Ms Moo Lai Kuan</h4>
+        <div class="role">Finance</div>
+        <p>10+ years in corporate financing. Director, nTan Corporate Advisory.</p>
+      </div>
+    </div>
+    <div class="team-col">
+      <h3>Scientific Team</h3>
+      <div class="team-member reveal">
+        <h4>Prof Tong Yen Wah</h4>
+        <div class="role">Co-Founder · Bioprocess Engineering</div>
+        <p>20+ years in tissue engineering, algae biologics, and sustainability. Accorded professorship by Musim Mas.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>Dr Ian Lim</h4>
+        <div class="role">Co-Founder · Research-to-Impact</div>
+        <p>18+ years in logistics, engineering, research, and business development. Expert in anaerobic microbiology and waste-to-resource technology.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>A/Prof Poh Chueh Loo</h4>
+        <div class="role">Synthetic Biology</div>
+        <p>20+ years in synthetic biology. Co-founder of AdvanceSyn. Vice-Chair, Global Biofoundry Alliance Steering Committee.</p>
+      </div>
+      <div class="team-member reveal">
+        <h4>A/Prof Loh Kai Chee</h4>
+        <div class="role">Bioprocess Engineering</div>
+        <p>20+ years in bioreactor design, algal energy, and biological treatment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>Let's Build<br><em>This Together.</em></h2>
+  <p>We are building the commercial infrastructure precision fermentation has been missing. The platform is the mission.</p>
+  <div class="cta-buttons">
+    <a href="mailto:laikuan@hygeia.bio" class="btn-primary">Request Full Deck</a>
+    <a href="https://www.linkedin.com/in/lai-kuan-moo" target="_blank" class="btn-secondary">Connect on LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Hygeia Biosciences</div>
+  <div class="footer-meta">Confidential · For Investors and Strategic Partners · 2026</div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>
